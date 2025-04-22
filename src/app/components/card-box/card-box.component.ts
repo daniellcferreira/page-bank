@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { LogoWhiteComponent } from "../../../assets/svgs/logo-white/logo-white.component";
 
 @Component({
   selector: 'app-card-box',
-  imports: [],
+  imports: [LogoWhiteComponent],
   standalone: true,
   templateUrl: './card-box.component.html',
   styleUrl: './card-box.component.css'
