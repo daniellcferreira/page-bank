@@ -2,9 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-logo-white',
-  standalone: true,
 	templateUrl: './logo-white.component.html',
-	styleUrls: []
+	styleUrls: ['./logo-white.component.css']
 })
 export class LogoWhiteComponent {
 	@Input() logoHeight: string = "114"
