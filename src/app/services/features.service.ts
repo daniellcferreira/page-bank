@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environments';
 
 @Injectable({
-	providedIn: 'root'
+    providedIn: 'root'
 })
-export class GetFeaturesService {
-	private url = 'https://digitalinnovationone.github.io/santander-dev-week-2023-api/mocks/find_one.json';
+export class FeaturesService {
 
-	constructor(private http: HttpClient) { }
+    private apiUrl = environment.API_URL;
 
-	getFeatures(description: string): Observable<any> {
-		return this.http.get<any>(this.url);
-	}
+    constructor(private http: HttpClient) { }
+
+    getFeature(): Observable<any> {
+        return this.http.get<any>(this.apiUrl);
+    }
 }
